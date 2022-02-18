@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -27,8 +28,6 @@ fun HomeScreen(navController: NavController){
         verticalArrangement=Arrangement.Center
     ) {
 
-        val navController = rememberNavController()
-
         Image(painter= painterResource(id= R.drawable.logo), contentDescription= "our logo")
 
         Spacer(modifier= Modifier.height(50.dp))
@@ -36,8 +35,11 @@ fun HomeScreen(navController: NavController){
         Divider()
 
         Button(onClick = {
-            navController.navigate(route = NavigationItem.LanguageScreen.route)
-        }) {
+            navController.navigate(route = NavigationItem.LanguageScreen.route)},
+            colors = ButtonDefaults.buttonColors(
+                backgroundColor = Color.Transparent,
+                contentColor = Color.Black))
+        {
             Text(text= "CLICK TO LAUNCH APP")
 
         }
