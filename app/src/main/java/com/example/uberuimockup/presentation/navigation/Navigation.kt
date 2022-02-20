@@ -33,7 +33,7 @@ fun ItemNavigation(navController: NavHostController){
             RegisterScreen(navController = navController)
         }
         composable(NavigationItem.AcceptTripScreen.route){
-            AcceptTripScreen()
+            AcceptTripScreen(navController = navController)
         }
         composable(NavigationItem.AddMoneyToWallet.route){
             AddMoneyToWallet()
@@ -45,7 +45,7 @@ fun ItemNavigation(navController: NavHostController){
             CancelTrip()
         }
         composable(NavigationItem.DocumentUploadScreen.route){
-            DocumentUploadScreen()
+            DocumentUploadScreen(navController = navController)
         }
         composable(NavigationItem.DriverNavDrawer.route){
             DriverNavDrawer()
