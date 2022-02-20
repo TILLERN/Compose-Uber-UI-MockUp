@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.uberuimockup.R
+import com.example.uberuimockup.presentation.components.HeaderIcon
 import com.example.uberuimockup.presentation.navigation.NavigationItem
 
 @Composable
@@ -30,6 +31,7 @@ fun RegisterScreen(navController: NavController){
     Column(modifier=Modifier
         .padding(5.dp)
         .fillMaxSize()) {
+        HeaderIcon()
         Box (
             modifier = Modifier.padding(start = 20.dp, end = 20.dp),
             contentAlignment = Alignment.CenterStart){
@@ -43,7 +45,9 @@ fun RegisterScreen(navController: NavController){
                     fontWeight = FontWeight.Bold,
                     color = colorResource(
                     id=R.color.slimmyGreen),
-                    fontSize = 30.sp
+                    fontSize = 26.sp,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth()
                 )
 
                 Spacer(modifier=Modifier.height(15.dp))

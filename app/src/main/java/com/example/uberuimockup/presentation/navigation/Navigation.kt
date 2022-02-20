@@ -26,7 +26,7 @@ fun ItemNavigation(navController: NavHostController){
         }
 
         composable(NavigationItem.LogInScreen.route){
-            LogInScreen()
+            LogInScreen(navController = navController)
         }
 
         composable(NavigationItem.RegisterScreen.route){
@@ -95,6 +95,8 @@ fun ItemNavigation(navController: NavHostController){
         composable(NavigationItem.WhyCancelTrip.route){
             WhyCancelTrip(navController = navController)
         }
+
+
     }
 
 }
