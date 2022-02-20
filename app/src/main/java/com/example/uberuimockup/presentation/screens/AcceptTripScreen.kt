@@ -46,7 +46,7 @@ fun AcceptTripScreen(navController: NavController){
             .fillMaxWidth()
             .padding(top=40.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement=Arrangement.Center) {
             Button(
-                onClick={ },
+                onClick={ navController.navigate(NavigationItem.WhyCancelTrip.route) },
                 modifier=Modifier.size(width=150.dp, height=40.dp),
                 shape=RoundedCornerShape(25.dp),
                 border=BorderStroke(2.dp, color=colorResource(id=R.color.slimmyGreen)),

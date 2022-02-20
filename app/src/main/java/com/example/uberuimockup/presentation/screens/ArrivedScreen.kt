@@ -54,7 +54,7 @@ fun ArrivedScreen(navController: NavController){
                         backgroundColor=Color.White,
                         contentColor=colorResource(id=R.color.slimmyGreen))) {
                     Text(
-                        text="Arrived at your destination: 58 Buruburu, Nairobi Nziu Court Phase 5 hse. 879",
+                        text="Arrived at your pick- up destination: 58 Buruburu, Nairobi Nziu Court Phase 5 hse. 879",
                         fontSize=20.sp,
                         fontWeight=FontWeight.Bold,
                         color=colorResource(id=R.color.slimmyGreen),

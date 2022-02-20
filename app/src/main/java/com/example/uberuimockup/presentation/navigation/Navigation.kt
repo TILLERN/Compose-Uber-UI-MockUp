@@ -57,7 +57,7 @@ fun ItemNavigation(navController: NavHostController){
             Earnings()
         }
         composable(NavigationItem.EndTrip.route){
-            EndTrip()
+            EndTrip(navController = navController)
         }
         composable(NavigationItem.EnterMobileNumberScreen.route){
             EnterMobileNumberScreen(navController= navController)
@@ -93,7 +93,7 @@ fun ItemNavigation(navController: NavHostController){
             Wallet()
         }
         composable(NavigationItem.WhyCancelTrip.route){
-            WhyCancelTrip()
+            WhyCancelTrip(navController = navController)
         }
     }
 
