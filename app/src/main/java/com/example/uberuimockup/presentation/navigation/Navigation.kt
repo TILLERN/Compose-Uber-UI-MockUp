@@ -39,7 +39,7 @@ fun ItemNavigation(navController: NavHostController){
             AddMoneyToWallet()
         }
         composable(NavigationItem.ArrivedScreen.route){
-            ArrivedScreen()
+            ArrivedScreen(navController = navController)
         }
         composable(NavigationItem.CancelTrip.route){
             CancelTrip()
@@ -75,7 +75,7 @@ fun ItemNavigation(navController: NavHostController){
             Settings()
         }
         composable(NavigationItem.StartTripMap.route){
-            StartTripMap()
+            StartTripMap(navController = navController)
         }
         composable(NavigationItem.TripDetails.route){
             TripDetails()
