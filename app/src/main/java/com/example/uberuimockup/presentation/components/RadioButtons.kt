@@ -4,18 +4,19 @@ import android.widget.Toast
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement.SpaceBetween
 import androidx.compose.foundation.selection.selectable
-import androidx.compose.material.Card
-import androidx.compose.material.RadioButton
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import com.example.uberuimockup.presentation.navigation.NavigationItem
 
 @Composable
 fun RadioButtons(){
@@ -65,7 +66,8 @@ fun RadioButtons(){
                    }
 
                 }
-                Spacer(modifier=Modifier.height(10.dp))
+                Spacer(modifier= Modifier.height(10.dp))
+
             }
         }
     }
