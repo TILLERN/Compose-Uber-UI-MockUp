@@ -23,12 +23,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.uberuimockup.R
+import com.example.uberuimockup.presentation.components.HeaderIcon
 import com.example.uberuimockup.presentation.navigation.NavigationItem
 
 @Composable
 fun WhyCancelTrip(navController: NavController){
     Column(modifier = Modifier.fillMaxSize()) {
-        Spacer(modifier=Modifier.height(25.dp))
+        Spacer(modifier=Modifier.height(5.dp))
+        HeaderIcon()
+        Spacer(modifier=Modifier.height(20.dp))
         Row(modifier = Modifier.padding(5.dp)) {
             Icon(imageVector= Icons.Default.ArrowBack, contentDescription="back")
             Spacer(modifier=Modifier.width(80.dp))

@@ -35,7 +35,7 @@ fun ItemNavigation(navController: NavHostController){
         composable(NavigationItem.AcceptTripScreen.route){
             AcceptTripScreen(navController = navController)
         }
-        composable(NavigationItem.AddMoneyToWallet.route){
+        composable(DrawerNavigationItem.AddMoneyToWallet.route){
             AddMoneyToWallet()
         }
         composable(NavigationItem.ArrivedScreen.route){
@@ -47,14 +47,17 @@ fun ItemNavigation(navController: NavHostController){
         composable(NavigationItem.DocumentUploadScreen.route){
             DocumentUploadScreen(navController = navController)
         }
-        composable(NavigationItem.DriverNavDrawer.route){
-            DriverNavDrawer()
-        }
-        composable(NavigationItem.DriverProfile.route){
+        composable(DrawerNavigationItem.DriverProfile.route){
             DriverProfile()
         }
-        composable(NavigationItem.Earnings.route){
+        composable(DrawerNavigationItem.Earnings.route){
             Earnings()
+        }
+        composable(NavigationItem.Rate.route){
+            Rate()
+        }
+        composable(NavigationItem.DriverNavDrawer.route){
+            DriverNavDrawer()
         }
         composable(NavigationItem.EndTrip.route){
             EndTrip(navController = navController)
@@ -68,28 +71,28 @@ fun ItemNavigation(navController: NavHostController){
         composable(NavigationItem.OtpVerificationScreen.route){
             OtpVerificationScreen(navController=navController)
         }
-        composable(NavigationItem.Ratings.route){
+        composable(DrawerNavigationItem.Ratings.route){
             Ratings()
         }
-        composable(NavigationItem.Settings.route){
+        composable(DrawerNavigationItem.Settings.route){
             Settings()
         }
         composable(NavigationItem.StartTripMap.route){
             StartTripMap(navController = navController)
         }
-        composable(NavigationItem.TripDetails.route){
+        composable(DrawerNavigationItem.TripDetails.route){
             TripDetails()
         }
         composable(NavigationItem.TripEnded.route){
             TripEnded()
         }
-        composable(NavigationItem.Trips.route){
+        composable(DrawerNavigationItem.Trips.route){
             Trips()
         }
         composable(NavigationItem.ViewAllTrips.route){
             ViewAllTrips()
         }
-        composable(NavigationItem.Wallet.route){
+        composable(DrawerNavigationItem.Wallet.route){
             Wallet()
         }
         composable(NavigationItem.WhyCancelTrip.route){

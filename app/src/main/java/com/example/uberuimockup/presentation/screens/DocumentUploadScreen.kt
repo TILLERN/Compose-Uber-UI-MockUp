@@ -20,12 +20,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.uberuimockup.R
+import com.example.uberuimockup.presentation.components.HeaderIcon
 import com.example.uberuimockup.presentation.navigation.NavigationItem
 
 @Composable
 fun DocumentUploadScreen(navController: NavController){
     Column(modifier = Modifier.padding(start = 20.dp ,top= 5.dp, end = 20.dp)) {
-        Spacer(modifier=Modifier.height(10.dp))
+        Spacer(modifier=Modifier.height(6.dp))
+        HeaderIcon()
+        Spacer(modifier=Modifier.height(6.dp))
 
         Row() {
             Icon(imageVector= Icons.Default.ArrowBack, contentDescription="back")
@@ -45,7 +48,7 @@ fun DocumentUploadScreen(navController: NavController){
             Column(modifier=Modifier
                 .fillMaxWidth()
                 .padding(5.dp)) {
-                Row(modifier=Modifier.fillMaxWidth(),
+                Row(modifier=Modifier.fillMaxWidth().padding(end = 5.dp),
                     horizontalArrangement=Arrangement.SpaceBetween) {
                     Text(text="Birth Certificate", fontSize=15.sp, fontWeight=FontWeight.Bold)
 
@@ -72,7 +75,7 @@ fun DocumentUploadScreen(navController: NavController){
                 .fillMaxWidth()
                 .padding(5.dp)) {
                 Column() {
-                    Row(modifier = Modifier.fillMaxWidth(),horizontalArrangement = Arrangement.SpaceBetween) {
+                    Row(modifier = Modifier.fillMaxWidth().padding(end = 5.dp),horizontalArrangement = Arrangement.SpaceBetween) {
                         Text(text= "Driving Licence", fontSize = 15.sp, fontWeight = FontWeight.Bold)
 
                         Text(
@@ -100,7 +103,7 @@ fun DocumentUploadScreen(navController: NavController){
             .fillMaxWidth()
             .padding(5.dp)) {
                 Column() {
-                    Row(modifier = Modifier.fillMaxWidth(),horizontalArrangement = Arrangement.SpaceBetween) {
+                    Row(modifier = Modifier.fillMaxWidth().padding(end = 5.dp),horizontalArrangement = Arrangement.SpaceBetween) {
                         Text(text= "Passport", fontSize = 15.sp, fontWeight = FontWeight.Bold)
                         Spacer(modifier=Modifier.height(2.dp))
                         Text(
@@ -124,7 +127,7 @@ fun DocumentUploadScreen(navController: NavController){
             .fillMaxWidth()
             .padding(5.dp)) {
                 Column() {
-                    Row(modifier = Modifier.fillMaxWidth(),horizontalArrangement = Arrangement.SpaceBetween) {
+                    Row(modifier = Modifier.fillMaxWidth().padding(end = 5.dp),horizontalArrangement = Arrangement.SpaceBetween) {
                         Text(text= "Election Card", fontSize = 15.sp, fontWeight = FontWeight.Bold)
                         Spacer(modifier=Modifier.height(2.dp))
                         Text(

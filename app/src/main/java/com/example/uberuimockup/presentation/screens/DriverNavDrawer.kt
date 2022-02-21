@@ -82,11 +82,17 @@ fun TopBar(scope: CoroutineScope, scaffoldState: ScaffoldState){
 fun Drawer(scope: CoroutineScope, scaffoldState: ScaffoldState, navController: NavController){
 
     val items = listOf(
-        DrawerNavigationItem.Home,
+//        DrawerNavigationItem.Home,
         DrawerNavigationItem.DriverProfile,
         DrawerNavigationItem.Settings,
         DrawerNavigationItem.Notifications,
-        DrawerNavigationItem.LogOut
+        DrawerNavigationItem.TripDetails,
+        DrawerNavigationItem.Trips,
+        DrawerNavigationItem.Ratings,
+        DrawerNavigationItem.Earnings,
+        DrawerNavigationItem.Wallet,
+        DrawerNavigationItem.AddMoneyToWallet,
+        DrawerNavigationItem.LogOut,
     )
 
     Column(

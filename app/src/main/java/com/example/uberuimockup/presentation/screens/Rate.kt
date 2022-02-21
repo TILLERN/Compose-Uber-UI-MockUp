@@ -1,5 +1,8 @@
 package com.example.uberuimockup.presentation.screens
 
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -28,7 +31,7 @@ import com.example.uberuimockup.R
 import com.example.uberuimockup.presentation.navigation.NavigationItem
 
 @Composable
-fun EndTrip(navController: NavController){
+fun Rate(){
     Box(modifier=Modifier
         .fillMaxSize()
         .padding(0.dp)){
@@ -89,32 +92,28 @@ fun EndTrip(navController: NavController){
                     Column(modifier = Modifier.fillMaxWidth(),) {
 
                         Spacer(modifier=Modifier.height(15.dp))
+                        Text(modifier = Modifier.fillMaxWidth(), text="How was you Rider?", color = Color.Black, fontWeight = FontWeight.Bold, fontSize = 20.sp , textAlign = TextAlign.Center )
+
+                        Spacer(modifier=Modifier.height(10.dp))
+                        Text(modifier = Modifier.fillMaxWidth(), text="Tillern", color = Color.Black, fontWeight = FontWeight.Bold, fontSize = 23.sp , textAlign = TextAlign.Center )
+
+                        Spacer(modifier=Modifier.height(10.dp))
                         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-                            Text(text=" 2 min", color = Color.Black, fontWeight = FontWeight.Bold, fontSize = 20.sp, modifier = Modifier.padding(end = 10.dp) )
-                            Image(
-                                painter=painterResource(id=R.drawable.victor),
-                                contentDescription="driver picture",
-                                contentScale=ContentScale.Crop,
-                                modifier=Modifier
-                                    .padding(end=25.dp)
-                                    .size(30.dp)
-                                    .clip(CircleShape)
-                                    .border(
-                                        2.dp,
-                                        color=colorResource(id=R.color.slimmyGreen),
-                                        CircleShape
-                                    )
-                            )
-                            Text(text=" 0.5 mi", color = Color.Black, fontWeight = FontWeight.Bold, fontSize = 20.sp)
+                            Icon(imageVector= Icons.Default.Star, contentDescription="rating", modifier = Modifier.background(color = Color.Yellow))
+                            Spacer(modifier=Modifier.width(4.dp))
+                            Icon(imageVector= Icons.Default.Star, contentDescription="rating", modifier = Modifier.background(color = Color.Yellow))
+                            Spacer(modifier=Modifier.width(4.dp))
+                            Icon(imageVector= Icons.Default.Star, contentDescription="rating", modifier = Modifier.background(color = Color.Yellow))
+                            Spacer(modifier=Modifier.width(4.dp))
+                            Icon(imageVector= Icons.Outlined.Star, contentDescription="rating", modifier = Modifier.background(color = Color.Yellow))
+                            Spacer(modifier=Modifier.width(4.dp))
+                            Icon(imageVector= Icons.Outlined.Star, contentDescription="rating", modifier = Modifier.background(color = Color.Yellow))
 
                         }
                         Spacer(modifier=Modifier.height(10.dp))
-                        Text(modifier = Modifier.fillMaxWidth(), text="Drop Tillern here", color = Color.Black, fontWeight = FontWeight.Bold, fontSize = 16.sp , textAlign = TextAlign.Center )
-
-                        Spacer(modifier=Modifier.height(10.dp))
 
                         OutlinedButton(
-                            onClick = {navController.navigate(NavigationItem.Rate.route)},
+                            onClick = {},
                             modifier= Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(23.dp),
                             border = BorderStroke(3.dp, Color.White),
@@ -123,7 +122,7 @@ fun EndTrip(navController: NavController){
                                 backgroundColor = colorResource(id=R.color.slimmyGreen),
                                 contentColor =  Color.White)
                         ) {
-                            Text(text="COMPLETE",
+                            Text(text="RATE RIDER",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 25.sp,
                                 textAlign = TextAlign.Center)
@@ -136,6 +135,3 @@ fun EndTrip(navController: NavController){
         }
     }
 }
-
-
-
