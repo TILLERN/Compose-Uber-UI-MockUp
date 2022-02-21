@@ -88,10 +88,10 @@ fun StartTripMap(navController: NavController){
 
     Box(
         contentAlignment = Alignment.BottomCenter,
-        modifier= Modifier.fillMaxWidth().padding(top = 780.dp,  bottom = 30.dp)
+        modifier= Modifier.fillMaxWidth().padding(top = 700.dp,  bottom = 30.dp)
     ){
         OutlinedButton(
-            onClick = { navController.navigate(NavigationItem.ArrivedScreen.route) },
+            onClick = { navController.navigate(NavigationItem.EndTrip.route) },
             modifier= Modifier.size(65.dp),
             shape = CircleShape,
             border= BorderStroke(2.dp, color = Color.White),

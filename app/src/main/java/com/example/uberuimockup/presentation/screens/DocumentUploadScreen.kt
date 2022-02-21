@@ -158,7 +158,7 @@ Spacer(modifier=Modifier.height(40.dp))
         )
         Spacer(modifier=Modifier.height(30.dp))
         Button(
-            onClick={ navController.navigate(NavigationItem.AcceptTripScreen.route) },
+            onClick={ navController.navigate(NavigationItem.LogInScreen.route) },
             colors=ButtonDefaults.buttonColors(
                 backgroundColor=colorResource(id= R.color.slimmyGreen),
                 contentColor=Color.White,

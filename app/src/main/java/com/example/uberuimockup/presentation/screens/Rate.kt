@@ -28,10 +28,11 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.uberuimockup.R
+import com.example.uberuimockup.presentation.navigation.DrawerNavigationItem
 import com.example.uberuimockup.presentation.navigation.NavigationItem
 
 @Composable
-fun Rate(){
+fun Rate(navController: NavController){
     Box(modifier=Modifier
         .fillMaxSize()
         .padding(0.dp)){
@@ -77,7 +78,7 @@ fun Rate(){
         contentAlignment = Alignment.BottomCenter,
         modifier=Modifier
             .fillMaxWidth()
-            .padding(top=700.dp, bottom=0.dp)
+            .padding(top=620.dp, bottom=0.dp)
     ){
         Card(modifier =Modifier
             .background(color=Color.White)
@@ -113,7 +114,7 @@ fun Rate(){
                         Spacer(modifier=Modifier.height(10.dp))
 
                         OutlinedButton(
-                            onClick = {},
+                            onClick = {navController.navigate(DrawerNavigationItem.DriverProfile.route)},
                             modifier= Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(23.dp),
                             border = BorderStroke(3.dp, Color.White),

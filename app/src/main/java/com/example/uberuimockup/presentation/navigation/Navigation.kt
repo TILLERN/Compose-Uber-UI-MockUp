@@ -47,14 +47,13 @@ fun ItemNavigation(navController: NavHostController){
         composable(NavigationItem.DocumentUploadScreen.route){
             DocumentUploadScreen(navController = navController)
         }
-        composable(DrawerNavigationItem.DriverProfile.route){
-            DriverProfile()
-        }
+        composable(DrawerNavigationItem.DriverProfile.route) { DriverProfile(navController = navController) }
+
         composable(DrawerNavigationItem.Earnings.route){
             Earnings()
         }
         composable(NavigationItem.Rate.route){
-            Rate()
+            Rate(navController = navController)
         }
         composable(NavigationItem.DriverNavDrawer.route){
             DriverNavDrawer()

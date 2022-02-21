@@ -74,7 +74,7 @@ fun EndTrip(navController: NavController){
         contentAlignment = Alignment.BottomCenter,
         modifier=Modifier
             .fillMaxWidth()
-            .padding(top=700.dp, bottom=0.dp)
+            .padding(top=670.dp, bottom=0.dp)
     ){
         Card(modifier =Modifier
             .background(color=Color.White)

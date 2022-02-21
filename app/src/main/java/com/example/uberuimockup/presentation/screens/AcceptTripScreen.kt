@@ -72,7 +72,7 @@ fun AcceptTripScreen(navController: NavController){
         contentAlignment = Alignment.BottomCenter,
         modifier=Modifier
             .fillMaxWidth()
-            .padding(top=650.dp, bottom=0.dp)
+            .padding(top=560.dp, bottom=0.dp)
     ){
         Card(modifier =Modifier
             .background(color=Color.White)
@@ -106,7 +106,7 @@ fun AcceptTripScreen(navController: NavController){
                       Spacer(modifier=Modifier.height(10.dp))
 
                       OutlinedButton(
-                          onClick={ navController.navigate(NavigationItem.StartTripMap.route) },
+                          onClick={ navController.navigate(NavigationItem.ArrivedScreen.route) },
                           modifier= Modifier.fillMaxWidth(),
                           shape = RoundedCornerShape(23.dp),
                           border = BorderStroke(3.dp, Color.White),
