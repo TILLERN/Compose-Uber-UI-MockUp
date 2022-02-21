@@ -29,6 +29,10 @@ fun ItemNavigation(navController: NavHostController){
             LogInScreen(navController = navController)
         }
 
+        composable(DrawerNavigationItem.Notifications.route){
+            Notifications()
+        }
+
         composable(NavigationItem.RegisterScreen.route){
             RegisterScreen(navController = navController)
         }

@@ -9,11 +9,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun TripDetails(){
+fun Notifications(){
     Column(modifier=Modifier.fillMaxSize(),
         horizontalAlignment=Alignment.CenterHorizontally,
         verticalArrangement=Arrangement.Center) {
-        Text(text=" Trip Details Here")
+        Text(text=" Notifications Screen Here")
 
     }
 }

@@ -46,7 +46,7 @@ fun HomeScreen(navController: NavController){
                 backgroundColor = Color.Transparent,
                 contentColor = Color.White)
         ) {
-            Text(text="CLICK HERE", fontWeight=FontWeight.Bold, fontSize = 22.sp)
+            Text(text="CLICK TO LAUNCH APP", fontWeight=FontWeight.Bold, fontSize = 22.sp)
 
         }
 

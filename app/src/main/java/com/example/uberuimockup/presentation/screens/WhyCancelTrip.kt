@@ -50,7 +50,55 @@ fun WhyCancelTrip(navController: NavController){
             fontWeight = FontWeight.Bold
         )
         Spacer(modifier=Modifier.height(10.dp))
-        ReasonsForTripCanceling()
+
+        val radioOptions = listOf(
+            "Rider Isn't here.",
+            "Wrong address shown.",
+            "Don't charge rider",
+            "Reason one.",
+            "Reason two.",
+            "Reason three.",
+            "Reason four.",
+            "Other.")
+        val (selectedOption, onOptionSelected) = remember { mutableStateOf(radioOptions[5]) }
+        radioOptions.forEach { text ->
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .selectable(
+                        selected=(text == selectedOption),
+                        onClick={ onOptionSelected(text) }
+                    )
+                    .padding(horizontal=15.dp)
+            ) {
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text = text,
+                        modifier = Modifier.padding(start = 16.dp)
+                    )
+
+                    val context = LocalContext.current
+
+                    RadioButton(
+                        selected = (text == selectedOption),
+                        modifier = Modifier.padding(all = Dp(value = 8F)),
+                        onClick = {
+                            onOptionSelected(text)
+                            Toast.makeText(context, text, Toast.LENGTH_LONG).show()
+                        }
+                    )
+                }
+
+            }
+            Divider()
+            Spacer(modifier= Modifier.height(8.dp))
+
+        }
+
         Spacer(modifier= Modifier.height(3.dp))
         Button(
             onClick={navController.navigate(NavigationItem.CancelTrip.route)},
